@@ -39,7 +39,8 @@
   },
   "scripts": {
     "test": "standard",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
