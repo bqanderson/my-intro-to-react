@@ -126,7 +126,6 @@ a > .show-card {
   display: block;
   float: right;
   width: 52%;
-  overflow-y: scroll;
 }
 
 .show-card-title {
