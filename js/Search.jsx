@@ -2,7 +2,7 @@ const React = require('react')
 const ShowCard = require('./ShowCard')
 const data = require('../public/data')
 
-const Search = React.createClass({
+class Search extends React.Component {
   render () {
     return (
       <div className='container'>
@@ -18,6 +18,6 @@ const Search = React.createClass({
       </div>
     )
   }
-})
+}
 
 module.exports = Search
