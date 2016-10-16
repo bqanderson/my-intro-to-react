@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .app-container {
@@ -28,8 +28,8 @@ html {
 
 .title {
   color: #B10DC9;
-  font-family: 'Roboto Slab';
-  font-weight: 700;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
 }
 
 .search {
@@ -165,8 +165,8 @@ a > .show-card {
 }
 
 .brand {
-  font-family: 'Roboto Slab';
-  font-weight: 700;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
   color: #B10DC9;
   margin: 0;
 }
