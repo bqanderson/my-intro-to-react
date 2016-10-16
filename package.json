@@ -39,7 +39,8 @@
     "webpack": "^1.12.13"
   },
   "scripts": {
-    "test": "standard",
+    "test": "mocha --require test/helpers/setup.js",
+    "lint": "standard",
     "build": "webpack",
     "watch": "webpack --watch"
   },
