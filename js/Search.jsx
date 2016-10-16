@@ -5,7 +5,7 @@ const data = require('../public/data')
 const Search = React.createClass({
   getInitialState () {
     return {
-      searchTerm: 'This is my search Term'
+      searchTerm: ''
     }
   },
   handelSearchTermEvent (event) {
@@ -15,13 +15,16 @@ const Search = React.createClass({
     return (
       <div className='container'>
         <header className='header'>
-          <h1 className='brand'>{this.state.searchTerm}</h1>
+          <h1 className='brand'>Video Finder v2.1</h1>
           <input value={this.state.searchTerm} className='search-input' type='text'
             placeholder='Search...' onChange={this.handelSearchTermEvent}
           />
         </header>
         <div className='shows'>
-          {data.shows.map((show) => (
+          {data.shows
+            .filter((show) => `${show.title} ${show.description}`.toUpperCase()
+              .indexOf(this.state.searchTerm.toUpperCase()) >= 0)
+          .map((show) => (
             <ShowCard {...show} key={show.imdbID} />
           ))}
         </div>
