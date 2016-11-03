@@ -12,7 +12,7 @@ const Store = require('./js/Store.jsx')
 const store = Store.store
 const _ = require('lodash')
 const fs = require('fs')
-const port = 5050
+// const port = 5050
 const baseTemplate = fs.readFileSync('./index.html')
 const template = _.template(baseTemplate)
 const ClientApp = require('./js/ClientApp.jsx')
@@ -41,5 +41,7 @@ app.use((req, res) => {
   })
 })
 
-console.log('Express sever listening on port ' + port)
-app.listen(port)
+var server = app.listen(process.env.PORT || 5050, function(){
+  var port = server.address().port
+  console.log("Listening on port", port)
+})
